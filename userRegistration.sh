@@ -38,3 +38,16 @@ for (( x=1; z<100; x++ ))
 				echo invalid
 		fi
 	done
+z=0
+for (( x=1; z<100; x++ ))
+	do
+		numPat="^[1-9]{1}[0-9]{9}"
+		read -p "Enter your mobiele no= 91" mobNum
+		if [[ $mobNum =~ $numPat ]]
+			then
+				echo valid
+				z=100
+			else
+				echo invalid
+		fi
+	done

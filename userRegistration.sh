@@ -2,7 +2,7 @@
 z=0
 for (( x=1; z<100; x++ ))
 	do
-		userName="^([A-Z]{1})[a-z]{2,15}$"
+		userName="^[[:upper:]]{1}[[:lower:]]{2,10}$
 		read -p "Enter your first name=" firstName
 		if [[ $firstName =~ $userName ]]
 			then
@@ -15,7 +15,7 @@ for (( x=1; z<100; x++ ))
 z=0
 for (( x=1; z<100; x++ ))
 	do
-		userName="^[A-Z]{1}[a-z]{2,15}$"
+		userName="^[[:upper:]]{1}[[:lower:]]{2,10}$
 		read -p "Enter your last name=" lastName
 		if [[ $lastName =~ $userName ]]
 			then
@@ -54,7 +54,7 @@ for (( x=1; z<100; x++ ))
 z=0
 for (( x=1; z<100; x++ ))
 	do
-		passwordPat="^([0-9a-zA-Z]*[.-@!#$%^&*]*){8,16}"
+		passwordPat="(^[[:lower:]]*|^[[:upper:]]{1}[[:lower:]]*[0-9]*)([[:upper:]]*[[:lower:]]*[0-9]*)+"
 		read -p "Enter a password= 91" password
 		if [[ $password =~ $passwordPat ]]
 			then

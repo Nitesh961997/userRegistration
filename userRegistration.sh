@@ -54,7 +54,7 @@ for (( x=1; z<100; x++ ))
 z=0
 for (( x=1; z<100; x++ ))
 	do
-		passwordPat="^([0-9a-zA-Z]*[.-@!#$%^&*]*){8}"
+		passwordPat="^([0-9a-zA-Z]*[.-@!#$%^&*]*){8,16}"
 		read -p "Enter a password= 91" password
 		if [[ $password =~ $passwordPat ]]
 			then
